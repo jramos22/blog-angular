@@ -1,0 +1,23 @@
+<header id="header">
+    <div class="center">
+        <!--Logo-->
+        <div id="logo">
+            <img src="assets/images/logo.svg" class="app-logo" alt="Logotipo" />
+            <span id="brand">
+                <strong>Blog</strong>Angular
+            </span>
+        </div>
+        <!--Menu-->
+        <nav id="menu" class="clearfix">
+            <ul>
+                <li><a [routerLink]="['/home']" [routerLinkActive]= "['active']">Inicio</a></li>
+                <li><a [routerLink]="['/blog']" [routerLinkActive]= "['active']">Blog</a></li>
+                <li><a [routerLink]="['/formulario']" [routerLinkActive]= "['active']">Formulario</a></li>
+                <li><a [routerLink]="['/peliculas']" [routerLinkActive]= "['active']">Peliculas</a></li>
+                <li><a [routerLink]="['/pagina-de-pruebas']" [routerLinkActive]= "['active']">Página</a></li>
+            </ul>
+        </nav>
+        <!--Limpiar lo flotado-->
+        <!--<div class="clearfix"></div>-->
+    </div>
+</header>

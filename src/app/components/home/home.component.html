@@ -1,0 +1,10 @@
+<app-slider
+  [nombre]="'Blog de Javascript con el framework Angular'"
+></app-slider>
+<div class="center clearfix">
+  <section id="content">
+    <h2 class="subheader">{{ titulo }}</h2>
+    <app-articles [articles]="articles"></app-articles>
+  </section>
+  <app-sidebar></app-sidebar>
+</div>

@@ -1,0 +1,33 @@
+<app-slider [nombre]="'Peliculas'" [size]="'small'"></app-slider>
+<div class="center clearfix">
+  <section id="content">
+    <div id="favorita" *ngIf="favorita">
+      <h2 class="subheader">Pelicula Favorita</h2>
+      <h4>
+        {{ favorita.title | uppercase }}
+      </h4>
+      <h5>
+        {{ favorita.year | espar }}
+      </h5>
+      <h5>
+        {{ this.fecha | date: "dd/MM/yyyy" }}
+      </h5>
+      <img
+        src="{{ favorita.image }}"
+        alt="{{ favorita.title }}"
+        width="121px"
+      />
+    </div>
+    <h1 class="subheader">Peliculas</h1>
+
+    <div id="articles" class="clearfix" *ngIf="peliculas">
+      <div *ngFor="let pelicula of peliculas; let i = index">
+        <app-pelicula
+          [pelicula]="pelicula"
+          (MarcarFavorita)="mostrarFavorita($event)"
+        ></app-pelicula>
+      </div>
+    </div>
+  </section>
+  <app-sidebar></app-sidebar>
+</div>
